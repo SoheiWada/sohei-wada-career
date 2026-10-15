@@ -499,6 +499,14 @@ footer{color:#66717b}
 .hero-mark{position:static;display:block;width:60px;height:auto;object-fit:contain}
 @media(max-width:640px){.hero-mark-badge{top:8px;right:15px;width:58px;height:58px}.hero-mark{width:46px}}
 
+
+/* Clear chapter starts for the three case studies, including on mobile. */
+.case-study,.case-study + .case-study{border-top:3px solid #f3c744;padding-top:32px}
+.case-nr{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-bottom:23px;line-height:1.5}
+.case-nr .case-badge{display:inline-flex;align-items:center;justify-content:center;margin:0;padding:8px 13px;min-height:36px;border-radius:6px;background:#26313b;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:.1em;white-space:nowrap}
+.case-nr .case-category{margin:0;color:#384652;font-size:13px;font-weight:750;letter-spacing:.035em;line-height:1.6}
+@media(max-width:720px){.case-study,.case-study + .case-study{padding-top:26px}.case-nr{gap:10px;margin-bottom:21px}.case-nr .case-category{font-size:12px}.case-nr .case-badge{padding:8px 12px}}
+
 </style>
 </head>
 <body>
@@ -519,7 +527,7 @@ footer{color:#66717b}
 <a href="#case-theater"><span>03</span> THEATER010 <b>CREATIVE / TEAM</b> <em>↓</em></a>
 </div>
 <article aria-labelledby="wedding-head" class="case-study" id="case-wedding">
-<div class="case-top"><div><div class="case-nr">CASE 01 <span>/</span> WEB・ブランド制作</div>
+<div class="case-top"><div><div class="case-nr"><span class="case-badge">CASE 01</span><span class="case-category">WEB・ブランド制作</span></div>
 <h3 id="wedding-head">紙の資料を、<br/>伝わる体験と申込の仕組みへ。</h3>
 <p class="case-intro">婚礼演出商品をもっと身近に感じてもらうために、紙の案内資料をLPへ。そこで終わらず、申込・通知・在庫・日程管理まで一つの流れにつなぎました。</p>
 <a class="project-link" href="https://sli-japan.github.io/SymphonyofLight/index-02.html" rel="noopener noreferrer" target="_blank">公開LPを見る ↗</a></div>
@@ -538,7 +546,7 @@ footer{color:#66717b}
 <p class="case-footnote">※売上10%増は対象商品の前年同時期比較による実績です。LP単独による因果効果を示すものではありません。</p>
 </article>
 <article aria-labelledby="seiryu-head" class="case-study" id="case-seiryu">
-<div class="case-top"><div><div class="case-nr">CASE 02 <span>/</span> 業務設計・DX</div>
+<div class="case-top"><div><div class="case-nr"><span class="case-badge">CASE 02</span><span class="case-category">業務設計・DX</span></div>
 <h3 id="seiryu-head">繰り返す仕事を仕組みに預け、<br/>スタッフに創造する時間を。</h3>
 <p class="case-intro">清流公園のイベント管理業務を、Salesforceで再設計。現場にとって「使わなければならないシステム」ではなく、「使いたくなる仕組み」を目指しました。</p>
 </div><aside class="case-metric case-metric-light"><span class="metric-overline">BEFORE / PER EVENT</span><strong>15–20</strong><span class="metric-caption">申込1件ごとに手作業で<br/>作成していたタスク数</span></aside></div>
@@ -561,7 +569,7 @@ footer{color:#66717b}
 <p class="case-footnote">※社内専用の業務システムです。画面・設計図・申請情報は公開せず、概要のみを紹介しています。削減時間は定量計測していません。</p>
 </article>
 <article aria-labelledby="theater-head" class="case-study" id="case-theater">
-<div class="case-top"><div><div class="case-nr">CASE 03 <span>/</span> クリエイティブ・技術統括</div>
+<div class="case-top"><div><div class="case-nr"><span class="case-badge">CASE 03</span><span class="case-category">クリエイティブ・技術統括</span></div>
 <h3 id="theater-head">未体験の演出を、<br/>実現できる空間とチームへ。</h3>
 <p class="case-intro">福岡のナイトタイムエコノミーに新しい選択肢をつくるTHEATER010。空間の設計段階から、演目・技術・運営を横断して関わりました。</p></div>
 <aside class="theater-role"><span class="metric-overline">MY RESPONSIBILITY</span><strong>TECHNICAL<br/>LEAD</strong><span>設計時の助言／演目選定／音響・照明クリエイション／技術部門責任者</span></aside></div>
