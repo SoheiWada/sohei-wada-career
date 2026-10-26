@@ -1,5 +1,49 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="utf-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+<html lang="ja"><head><meta charset="utf-8"><script id="portfolio-entry">
+(function portfolioEntry(){
+  'use strict';
+  const navigation=performance.getEntriesByType?.('navigation')[0];
+  // History traversal retains the reader's place; a new visit or reload starts at the cover.
+  if(navigation?.type==='back_forward')return;
+  const root=document.documentElement;
+  const previousBehavior=root.style.scrollBehavior;
+  const supportsRestoration='scrollRestoration' in history;
+  const previousRestoration=supportsRestoration?history.scrollRestoration:null;
+  let active=true;
+  const inputEvents=['pointerdown','touchstart','wheel','keydown'];
+  if(supportsRestoration)history.scrollRestoration='manual';
+  root.style.scrollBehavior='auto';
+  if(location.hash)history.replaceState(history.state,'',location.pathname+location.search);
+  function top(){
+    if(active&&!location.hash)window.scrollTo(0,0);
+  }
+  function finish(){
+    if(!active)return;
+    active=false;
+    root.style.scrollBehavior=previousBehavior;
+    if(supportsRestoration)history.scrollRestoration=previousRestoration;
+    inputEvents.forEach(type=>removeEventListener(type,finish,true));
+    removeEventListener('hashchange',finish);
+    removeEventListener('pagehide',finish);
+    removeEventListener('DOMContentLoaded',top);
+    removeEventListener('pageshow',shown);
+  }
+  function shown(event){
+    if(event.persisted){finish();return;}
+    top();
+    requestAnimationFrame(()=>{
+      top();
+      requestAnimationFrame(()=>{top();finish();});
+    });
+  }
+  inputEvents.forEach(type=>addEventListener(type,finish,{capture:true,passive:true}));
+  addEventListener('hashchange',finish,{once:true});
+  addEventListener('pagehide',finish,{once:true});
+  addEventListener('DOMContentLoaded',top,{once:true});
+  addEventListener('pageshow',shown,{once:true});
+  top();
+})();
+</script><meta content="width=device-width,initial-scale=1" name="viewport">
 <meta content="noindex,nofollow,noimageindex,noarchive,nosnippet" name="robots"><meta content="noindex,nofollow,noimageindex,noarchive,nosnippet" name="googlebot"><meta content="noindex,nofollow,noimageindex,noarchive,nosnippet" name="bingbot">
 <meta content="人が輝く、その余白をつくる。和田壮平のプロジェクトポートフォリオ。Web・ブランド制作、業務設計・DX、クリエイティブ・技術統括の実績。" name="description">
 <meta content="#ffffff" name="theme-color"><title>和田 壮平 — 人が輝く、その余白をつくる。</title>
