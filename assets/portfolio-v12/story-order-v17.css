@@ -1,0 +1,42 @@
+/* Give the technical record and the self-initiated community story their own place. */
+.international-project{padding-top:0;padding-bottom:48px}
+.international-kicker{display:flex;justify-content:space-between;gap:20px;color:#827458;border-top:1px solid #e6dcc6;padding-top:24px;margin-bottom:24px}
+.international-feature{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,4vw,58px);align-items:center}
+.international-feature>figure{min-width:0}
+.international-feature img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#fbfaf7}
+.international-feature figcaption{display:flex;justify-content:space-between;gap:12px;color:#897b60;font-size:8px;letter-spacing:.07em;margin-top:12px}
+.international-copy h2{font-size:clamp(26px,3vw,39px);line-height:1.55;letter-spacing:-.035em;font-weight:550}
+.international-copy>p{font-size:14px;line-height:2;color:#686868;max-width:36em;margin-top:22px}
+.international-role{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;color:#8a7751;font-size:11px;line-height:1.8}
+.community-section.more-projects{padding-top:40px;padding-bottom:56px}
+.community-section .minor-heading{display:block;padding-bottom:22px}
+.community-section .minor-heading>.micro{font-size:10px;color:#827458}
+.community-section .minor-heading h2{font-size:clamp(28px,3.1vw,42px);line-height:1.5;letter-spacing:-.04em;margin-top:12px}
+.community-section #community-purpose{border-top:0;padding-top:0;margin-top:24px;margin-bottom:28px}
+.community-feature{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr);gap:clamp(24px,4vw,56px);align-items:start}
+.community-feature>figure img{aspect-ratio:1400/788;object-fit:contain}
+.community-feature .beyond-copy{padding-top:0}
+.community-feature .beyond-copy h3{font-size:clamp(24px,2.3vw,32px)}
+.community-feature .beyond-copy>p{font-size:14px;line-height:2}
+.theater-lab .crew-node .crew-label-ja{font-family:var(--sans);font-size:24px;font-weight:500;letter-spacing:1px}
+.theater-lab .crew-node .crew-label-en{font-family:var(--latin);font-size:11px;font-weight:500;letter-spacing:1.3px}
+@media(max-width:900px){.international-feature{grid-template-columns:1.1fr 1fr;gap:28px}.international-copy h2{font-size:27px}.international-copy>p{font-size:13px;margin-top:18px}.community-feature{grid-template-columns:1.2fr 1fr;gap:28px}.community-feature .beyond-copy>p{font-size:13px}}
+@media(max-width:600px){
+ .international-project{padding-bottom:36px}
+ .international-kicker{display:block;font-size:9px;padding-top:20px;margin-bottom:20px}
+ .international-kicker>span{display:block}
+ .international-kicker>span+span{font-size:8px;margin-top:6px;letter-spacing:.08em}
+ .international-feature{grid-template-columns:1fr;gap:22px}
+ .international-feature figcaption{font-size:7px;flex-wrap:wrap}
+ .international-copy h2{font-size:26px;line-height:1.55}
+ .international-copy>p{font-size:13px;margin-top:16px}
+ .international-role{font-size:10px;gap:8px 16px;margin-top:16px}
+ .community-section.more-projects{padding-top:28px;padding-bottom:40px}
+ .community-section .minor-heading{padding-bottom:18px}
+ .community-section .minor-heading h2{font-size:28px;margin-top:12px}
+ .community-section #community-purpose{margin-top:20px;margin-bottom:24px}
+ .community-feature{grid-template-columns:1fr;gap:20px}
+ .community-feature .beyond-copy h3{font-size:25px}
+ .community-feature .beyond-copy>p{font-size:13px}
+}
+@media print{.international-project,.community-section.more-projects{padding-block:24px}.international-feature,.community-feature{break-inside:avoid}.international-copy>p,.community-feature .beyond-copy>p{font-size:11px}.international-feature figcaption{font-size:7px}}
