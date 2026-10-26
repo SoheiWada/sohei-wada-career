@@ -1,0 +1,39 @@
+/* Light becomes a personal step, then a shared place. */
+.possibility{margin:64px 0 88px;border-top:1px solid #e7dfcd;padding-top:24px;scroll-margin-top:110px}
+.possibility-top{display:flex;justify-content:space-between;gap:24px;color:#786c50}
+.possibility-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(24px,5vw,80px);align-items:center;padding-top:34px}
+.possibility-copy h3{font-size:clamp(28px,3.4vw,49px);line-height:1.5;letter-spacing:-.035em;font-weight:500;margin-bottom:24px}
+.possibility-copy>p{max-width:40em;color:#626262;font-size:14px;line-height:2.1}
+.possibility-art{position:relative;min-width:0;background:radial-gradient(ellipse at 50% 50%,#fff3cd 0%,#fffdf7 45%,#fff 72%);aspect-ratio:1.42;isolation:isolate}
+.possibility-art svg{width:100%;height:100%;overflow:visible}
+.possibility-art path,.possibility-art circle,.possibility-art ellipse{vector-effect:non-scaling-stroke}
+.possibility-art .orbit{fill:none;stroke:#e3d4aa;stroke-width:.7;opacity:.45}
+.possibility-art .thread{fill:none;stroke:url(#possibility-gold);stroke-width:1.6;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1),opacity 1.2s;opacity:.2}
+.possibility-art .seed{fill:#edba45;transform-origin:400px 230px;transition:transform 1.8s cubic-bezier(.2,.7,.2,1),opacity 1.2s}
+.possibility-art .halo{fill:none;stroke:#d5a538;stroke-width:1;transform-origin:400px 230px;transition:transform 1.8s,opacity 1.5s}
+.possibility-art .satellite{fill:#fffdf5;stroke:#c6a350;stroke-width:1;transform-box:fill-box;transform-origin:center;transform:scale(.1);opacity:0;transition:transform 1.5s cubic-bezier(.2,.7,.2,1),opacity 1.2s}
+.possibility-art .satellite.core{fill:#f3ce74}
+.possibility-art text{font-family:var(--sans);font-size:17px;fill:#736441;letter-spacing:.1em;opacity:0;transition:opacity 1.2s}
+.possibility[data-step="0"] .halo{transform:scale(.43);opacity:.55}
+.possibility[data-step="1"] .halo{transform:scale(.74);opacity:.7}
+.possibility[data-step="2"] .halo{transform:scale(1);opacity:.45}
+.possibility[data-step="1"] .thread.inner,.possibility[data-step="2"] .thread{stroke-dashoffset:0;opacity:.85}
+.possibility[data-step="1"] .satellite.core,.possibility[data-step="2"] .satellite{opacity:1;transform:scale(1)}
+.possibility[data-step="1"] text.inner-label,.possibility[data-step="2"] text{opacity:1}
+.possibility[data-step="2"] .seed{transform:scale(.55)}
+.possibility-art .light-trace{fill:#b77c18;opacity:0;offset-path:path('M400 230 C310 60 155 70 150 230 C145 390 310 400 400 230 C490 60 645 70 650 230 C655 390 490 400 400 230');animation:possibility-travel 12s linear infinite;animation-play-state:paused}
+.possibility.in-view:not([data-static]) .light-trace{opacity:.75;animation-play-state:running}
+@keyframes possibility-travel{to{offset-distance:100%}}
+.possibility-controls{display:flex;gap:0;border-bottom:1px solid #e8dfcb;margin-top:22px}
+.possibility-controls button{flex:1;text-align:left;background:none;border:0;border-bottom:2px solid transparent;padding:13px 8px 15px 0;line-height:1.65;font-size:12px;color:#777;transition:color .3s,border-color .3s}
+.possibility-controls button span{display:block;font:500 10px var(--latin);letter-spacing:.14em;color:#aa8b45;margin-bottom:6px}
+.possibility-controls button[aria-pressed="true"]{border-color:#d9ac42;color:#282828}
+.possibility-caption{font-size:13px;line-height:1.9;color:#686868;min-height:3.8em;margin-top:16px}
+.possibility-note{font-size:10px!important;color:#888!important;margin-top:12px;line-height:1.8!important}
+.vision-story{margin-top:34px;margin-bottom:75px}
+.vision-story .possibility-copy h3{font-size:clamp(27px,3vw,43px)}
+.vision-story .possibility-art .thread{stroke:url(#vision-gold)}
+.motion-paused .possibility *,.page-inactive .possibility *{animation-play-state:paused!important}
+.possibility[data-static] *{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){.possibility *{animation:none!important;transition:none!important}}
+@media(max-width:760px){.possibility{margin:35px 0 50px}.possibility-layout{grid-template-columns:1fr;gap:12px;padding-top:24px}.possibility-copy h3{font-size:29px;margin-bottom:18px}.possibility-copy>p{font-size:13px}.possibility-top{font-size:9px;gap:12px}.possibility-art{aspect-ratio:1.4}.possibility-controls{margin-top:8px}.possibility-controls button{font-size:11px}.possibility-caption{font-size:12px}.vision-story{margin-bottom:45px}}
