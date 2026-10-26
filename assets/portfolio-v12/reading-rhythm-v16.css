@@ -1,0 +1,78 @@
+/* Reading rhythm: keep the light, bring each story back into one continuous page. */
+@media screen {
+  .hero-stage{min-height:0;padding-block:40px 32px}
+  .hero-art{max-height:560px}
+  .experience-band{margin-top:28px;margin-bottom:72px}
+  .project-portals{margin-top:32px;margin-bottom:64px}
+  .project{padding-bottom:72px}
+  .project-intro,.project-theater .project-intro{padding-top:28px;padding-bottom:28px}
+  .project-story{margin-top:28px}
+  .more-projects{padding-top:64px;padding-bottom:64px}
+  .minor-heading{padding-bottom:20px}
+  .possibility{margin:32px 0 40px;padding-top:18px}
+  .possibility-layout{align-items:start;column-gap:clamp(24px,4vw,64px);padding-top:24px}
+  .possibility-copy h3{margin-bottom:16px}
+  .possibility-art{aspect-ratio:800 / 460}
+  .possibility-controls{margin-top:10px}
+  .possibility-caption{min-height:2.2em;margin-top:12px}
+  .possibility-note{margin-top:8px}
+  #community-purpose{margin-bottom:0}
+  .beyond-grid{margin-top:32px}
+  .beyond-copy{padding-top:20px}
+  .approach.room-approach{padding-top:44px;padding-bottom:48px}
+  .room-introduction{padding-bottom:20px;margin-bottom:28px}
+  .room-principles{padding:0 0 16px}
+  .room-principle{min-height:0;padding-top:24px;padding-bottom:24px}
+  .room-step-content{margin-top:18px}
+  .room-step-content p{margin-top:14px}
+  .room-keyword{margin-top:18px}
+  .profile{padding-top:56px;padding-bottom:64px}
+  .vision-story{margin-top:20px;margin-bottom:36px}
+  .profile-grid{margin-top:0}
+  .profile-grid h2{margin-bottom:20px}
+  .english-overview{margin-top:28px}
+  .resume{padding-top:32px;padding-bottom:40px}
+}
+@media screen and (max-width:1000px) {
+  .hero-stage{padding-top:34px;padding-bottom:28px}
+  .experience-band{margin-bottom:56px}
+  .project{padding-bottom:56px}
+  .more-projects{padding-top:48px;padding-bottom:48px}
+  .profile{padding-top:44px;padding-bottom:48px}
+}
+@media screen and (max-width:760px) {
+  .possibility{margin-top:24px;margin-bottom:28px}
+  .possibility-layout{gap:16px;padding-top:20px}
+  .possibility-art{aspect-ratio:800 / 460}
+  .possibility-controls{margin-top:8px}
+  .possibility-caption{min-height:0;margin-top:12px}
+  .vision-story{margin-top:16px;margin-bottom:28px}
+  .vision-footer{margin-top:8px}
+}
+@media screen and (max-width:600px) {
+  .hero-stage{padding-top:26px;padding-bottom:20px}
+  .hero-art{max-height:none}
+  .experience-band{margin-top:24px;margin-bottom:44px}
+  .project-portals{margin-top:24px;margin-bottom:40px}
+  .project{padding-bottom:44px}
+  .project-intro,.project-theater .project-intro{padding-top:16px;padding-bottom:24px}
+  .project-intro-copy{margin-top:18px}
+  .project-story{margin-top:24px}
+  .more-projects{padding-top:40px;padding-bottom:40px}
+  .minor-heading{padding-bottom:18px}
+  .beyond-grid{margin-top:28px}
+  .beyond-copy{padding-top:18px}
+  .approach.room-approach{padding-top:28px;padding-bottom:32px}
+  .room-introduction{padding-bottom:18px;margin-bottom:20px}
+  .room-art{height:clamp(180px,48vw,220px)}
+  .room-principles{padding-top:16px;padding-bottom:0}
+  .room-principle{min-height:0;padding-top:22px;padding-bottom:22px}
+  .room-step-content{margin-top:14px}
+  .room-step-content p{margin-top:12px}
+  .room-keyword{margin-top:16px}
+  .profile{padding-top:36px;padding-bottom:40px}
+  .profile-grid{gap:24px}
+  .profile-grid h2{margin-bottom:18px}
+  .english-overview{margin-top:24px}
+  .resume{padding-top:28px;padding-bottom:32px}
+}
